@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="calender.css" rel="stylesheet">
+    <title>calender</title>
+</head>
+<body> 
+    <div class="januery" onclick="zoomImage('./img/januery.jpg')">
+        <img src="./img/januery.jpg" class="januery1" alt="Image 1">
+        <h2>January</h2>
+    </div>
+    <div class="fabruary" onclick="zoomImage('./img/fabruary.jpg')">
+        <img src="./img/fabruary.jpg" class="fabruary1" alt="Image 2">
+        <h2>February</h2>
+    </div>
+    <div class="march" onclick="zoomImage('./img/march.jpg')">
+        <img src="./img/march.jpg" class="march1" alt="Image 3">
+        <h2>March</h2>
+    </div>
+    <div class="april" onclick="zoomImage('./img/april.jpg')">
+        <img src="./img/april.jpg" class="april1" alt="Image 4">
+        <h2>April</h2>
+    </div>
+    <div class="may" onclick="zoomImage('./img/may.jpg')">
+        <img src="./img/may.jpg" class="may1" alt="Image 5">
+        <h2>May</h2>
+    </div>
+    <div class="jun" onclick="zoomImage('./img/jun.jpg')">
+        <img src="./img/jun.jpg" class="jun1" alt="Image 6">
+        <h2>June</h2>
+    </div>
+    <div class="july" onclick="zoomImage('./img/july.jpg')">
+        <img src="./img/july.jpg" class="july1" alt="Image 7">
+        <h2>July</h2>
+    </div>
+    <div class="august" onclick="zoomImage('./img/auguest.jpg')">
+        <img src="./img/auguest.jpg" class="august1" alt="Image 8">
+        <h2>August</h2>
+    </div>
+    <div class="september" onclick="zoomImage('./img/suptember.jpg')">
+        <img src="./img/suptember.jpg" class="september1" alt="Image 9">
+        <h2>September</h2>
+    </div>
+    <div class="october" onclick="zoomImage('./img/octomber.jpg')">
+        <img src="./img/octomber.jpg" class="october1" alt="Image 10">
+        <h2>October</h2>
+    </div>
+    <div class="november" onclick="zoomImage('./img/november.jpg')">
+        <img src="./img/november.jpg" class="november1" alt="Image 11">
+        <h2>November</h2>
+    </div>
+    <div class="december" onclick="zoomImage('./img/december.jpg')">
+        <img src="./img/december.jpg" class="december1" alt="Image 12">
+        <h2>December</h2>
+    </div>
+
+    <div class="zoomed-image-container" onclick="closeZoomedImage()">
+        <span class="close-button" onclick="closeZoomedImage()">&times;</span>
+        <img class="zoomed-image" id="zoomedImg" alt="Zoomed Image">
+      </div>
+    
+      <script>
+        function zoomImage(imageSrc) {
+          const zoomedImg = document.getElementById('zoomedImg');
+          zoomedImg.src = imageSrc;
+          document.querySelector('.zoomed-image-container').style.display = 'flex';
+        }
+    
+        function closeZoomedImage() {
+          document.querySelector('.zoomed-image-container').style.display = 'none';
+        }
+      </script>
+
+</body>
+</html>
